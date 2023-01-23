@@ -1,4 +1,6 @@
 import math
+
+
 class Rectangle:
 
   def __init__(self, width, height):
@@ -30,12 +32,13 @@ class Rectangle:
     return returnStr
 
   def get_amount_inside(self, shape):
-    vertical = math.floor(self.height/shape.height)
-    horizontal = math.floor(self.width/shape.width)
-    if vertical < 0 or horizontal< 0 : return 0
+    vertical = math.floor(self.height / shape.height)
+    horizontal = math.floor(self.width / shape.width)
     return vertical * horizontal if vertical * horizontal > 0 else 0
 
+
 class Square(Rectangle):
+
   def __init__(self, side):
     self.width = side
     self.height = side
